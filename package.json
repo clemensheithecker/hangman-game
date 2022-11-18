@@ -1,0 +1,23 @@
+{
+  "name": "hangman-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clemensheithecker/hangman-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clemensheithecker/hangman-game/issues"
+  },
+  "homepage": "https://github.com/clemensheithecker/hangman-game#readme",
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  }
+}
