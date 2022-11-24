@@ -1,21 +1,19 @@
 body {
+  padding: 1rem;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #f9fafb;
 }
 
 main {
-  height: 100%;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  max-width: 1024px;
   background-color: #fff;
   border-radius: 0.5rem;
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
@@ -33,7 +31,7 @@ h1 {
 
 .countdown {
   padding: 0.75rem 2rem;
-  margin: 4rem 0 2rem 0;
+  margin: 2rem 0 1rem 0;
   font-size: 1.25rem;
   font-weight: 700;
   background-color: #2563eb;
@@ -48,7 +46,7 @@ h1 {
 .secret-word {
   display: flex;
   width: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #111827;
 }
 
@@ -116,12 +114,13 @@ h1 {
 }
 
 .footer {
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: #9ca3af;
 }
 
 .footer p {
   margin: 0;
+  text-align: center;
 }
 
 .footer a {
@@ -132,10 +131,15 @@ h1 {
   main {
     padding: 4rem;
     height: auto;
+    max-width: 1024px;
   }
 
-  .alphabet {
-    width: 75%;
+  .countdown {
+    margin: 4rem 0 2rem 0;
+  }
+
+  .secret-word {
+    margin-bottom: 2rem;
   }
 
   .secret-letter-wrapper {
@@ -148,6 +152,22 @@ h1 {
     font-size: 3rem;
     font-family: monospace;
   }
+
+  .footer {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .alphabet {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -157,8 +177,6 @@ h1 {
 
   main {
     background-color: #1f2937;
-    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
-      drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   }
 
   h1 {
