@@ -19,56 +19,38 @@
     <main>
       <h1>Hangman Game</h1>
       <div class="countdown">
-        <p>10 Tries Left</p>
+        <p id="countdown">10 Tries Left</p>
       </div>
-      <div class="secret-word">
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter secret-letter-hidden">A</span>
-        </div>
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter">N</span>
-        </div>
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter">I</span>
-        </div>
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter">M</span>
-        </div>
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter secret-letter-hidden">A</span>
-        </div>
-        <div class="secret-letter-wrapper">
-          <span class="secret-letter">L</span>
-        </div>
-      </div>
+      <div id="secret-word" class="secret-word"></div>
       <div class="alphabet">
-        <button class="letter letter-failure">A</button>
-        <button class="letter">B</button>
-        <button class="letter">C</button>
-        <button class="letter">D</button>
-        <button class="letter">E</button>
-        <button class="letter">F</button>
-        <button class="letter">G</button>
-        <button class="letter">H</button>
-        <button class="letter">I</button>
-        <button class="letter">J</button>
-        <button class="letter letter-success">K</button>
-        <button class="letter">L</button>
-        <button class="letter">M</button>
-        <button class="letter">N</button>
-        <button class="letter">O</button>
-        <button class="letter">P</button>
-        <button class="letter">Q</button>
-        <button class="letter">R</button>
-        <button class="letter">S</button>
-        <button class="letter">T</button>
-        <button class="letter">U</button>
-        <button class="letter">V</button>
-        <button class="letter">W</button>
-        <button class="letter">X</button>
-        <button class="letter">Y</button>
-        <button class="letter">Z</button>
+        <button id="letter-a" class="letter" value="A">A</button>
+        <button id="letter-b" class="letter">B</button>
+        <button id="letter-c" class="letter">C</button>
+        <button id="letter-d" class="letter">D</button>
+        <button id="letter-e" class="letter">E</button>
+        <button id="letter-f" class="letter">F</button>
+        <button id="letter-g" class="letter">G</button>
+        <button id="letter-h" class="letter">H</button>
+        <button id="letter-i" class="letter">I</button>
+        <button id="letter-j" class="letter">J</button>
+        <button id="letter-k" class="letter">K</button>
+        <button id="letter-l" class="letter">L</button>
+        <button id="letter-m" class="letter">M</button>
+        <button id="letter-n" class="letter">N</button>
+        <button id="letter-o" class="letter">O</button>
+        <button id="letter-p" class="letter">P</button>
+        <button id="letter-q" class="letter">Q</button>
+        <button id="letter-r" class="letter">R</button>
+        <button id="letter-s" class="letter">S</button>
+        <button id="letter-t" class="letter">T</button>
+        <button id="letter-u" class="letter">U</button>
+        <button id="letter-v" class="letter">V</button>
+        <button id="letter-w" class="letter">W</button>
+        <button id="letter-x" class="letter">X</button>
+        <button id="letter-y" class="letter">Y</button>
+        <button id="letter-z" class="letter">Z</button>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

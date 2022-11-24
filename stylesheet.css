@@ -72,13 +72,13 @@ h1 {
   cursor: pointer;
 }
 
-.letter-failure {
+.wrong-letter {
   color: rgb(153 27 27);
   background-color: rgb(254 202 202);
   border-color: rgb(252 165 165);
 }
 
-.letter-success {
+.correct-letter {
   color: rgb(22 101 52);
   background-color: rgb(187 247 208);
   border-color: rgb(134 239 172);
@@ -102,7 +102,8 @@ h1 {
 }
 
 .secret-letter-hidden {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 @media (min-width: 640px) {
