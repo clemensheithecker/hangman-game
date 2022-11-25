@@ -16,51 +16,62 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <main>
-      <h1>Hangman Game</h1>
-      <div class="countdown">
-        <p id="countdown">10 Tries Left</p>
-      </div>
-      <div id="secret-word" class="secret-word"></div>
-      <div class="alphabet">
-        <button id="letter-a" class="letter" value="A">A</button>
-        <button id="letter-b" class="letter">B</button>
-        <button id="letter-c" class="letter">C</button>
-        <button id="letter-d" class="letter">D</button>
-        <button id="letter-e" class="letter">E</button>
-        <button id="letter-f" class="letter">F</button>
-        <button id="letter-g" class="letter">G</button>
-        <button id="letter-h" class="letter">H</button>
-        <button id="letter-i" class="letter">I</button>
-        <button id="letter-j" class="letter">J</button>
-        <button id="letter-k" class="letter">K</button>
-        <button id="letter-l" class="letter">L</button>
-        <button id="letter-m" class="letter">M</button>
-        <button id="letter-n" class="letter">N</button>
-        <button id="letter-o" class="letter">O</button>
-        <button id="letter-p" class="letter">P</button>
-        <button id="letter-q" class="letter">Q</button>
-        <button id="letter-r" class="letter">R</button>
-        <button id="letter-s" class="letter">S</button>
-        <button id="letter-t" class="letter">T</button>
-        <button id="letter-u" class="letter">U</button>
-        <button id="letter-v" class="letter">V</button>
-        <button id="letter-w" class="letter">W</button>
-        <button id="letter-x" class="letter">X</button>
-        <button id="letter-y" class="letter">Y</button>
-        <button id="letter-z" class="letter">Z</button>
-      </div>
-      <div class="footer">
+    <div class="game">
+      <header>
+        <h1>Hangman Game</h1>
+      </header>
+      <main>
+        <div class="countdown">
+          <p id="countdown">10 Tries Left</p>
+        </div>
+        <div id="secret-word" class="secret-word"></div>
+        <div class="alphabet">
+          <button id="letter-a" class="letter" value="A">A</button>
+          <button id="letter-b" class="letter">B</button>
+          <button id="letter-c" class="letter">C</button>
+          <button id="letter-d" class="letter">D</button>
+          <button id="letter-e" class="letter">E</button>
+          <button id="letter-f" class="letter">F</button>
+          <button id="letter-g" class="letter">G</button>
+          <button id="letter-h" class="letter">H</button>
+          <button id="letter-i" class="letter">I</button>
+          <button id="letter-j" class="letter">J</button>
+          <button id="letter-k" class="letter">K</button>
+          <button id="letter-l" class="letter">L</button>
+          <button id="letter-m" class="letter">M</button>
+          <button id="letter-n" class="letter">N</button>
+          <button id="letter-o" class="letter">O</button>
+          <button id="letter-p" class="letter">P</button>
+          <button id="letter-q" class="letter">Q</button>
+          <button id="letter-r" class="letter">R</button>
+          <button id="letter-s" class="letter">S</button>
+          <button id="letter-t" class="letter">T</button>
+          <button id="letter-u" class="letter">U</button>
+          <button id="letter-v" class="letter">V</button>
+          <button id="letter-w" class="letter">W</button>
+          <button id="letter-x" class="letter">X</button>
+          <button id="letter-y" class="letter">Y</button>
+          <button id="letter-z" class="letter">Z</button>
+        </div>
+        <div class="winner-message display-none">
+          <h2>Congratulations, you won! 🥳</h2>
+          <button id="retry-button">Play again</button>
+        </div>
+      </main>
+      <footer>
         <p>
           Built with ❤️ by
           <a href="https://github.com/clemensheithecker/">Clemens</a>,
           <a href="https://github.com/ddpeneva">Dayana</a>,
           <a href="https://github.com/GeetanjaliNR">Geetanjali</a>,
-          <a href="https://github.com/neusgp">Neus</a> and
-          <a href="https://github.com/sarahcode2112">Sarah</a>.
+          <a href="https://github.com/neusgp">Neus</a> and&nbsp;<a
+            href="https://github.com/sarahcode2112"
+            >Sarah</a
+          >.
         </p>
-      </div>
-    </main>
-    <script src="index.js"></script>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

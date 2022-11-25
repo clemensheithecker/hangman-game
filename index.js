@@ -1,5 +1,8 @@
-let countdown = 10;
-const WORDS = [
+import { listenToKeyboard } from "./keyBindings.js";
+
+const JS_CONFETTI = new JSConfetti();
+
+const SECRET_WORDS = [
   "fashion",
   "employee",
   "original",
@@ -16,45 +19,46 @@ const WORDS = [
   "dishwasher",
 ];
 
-let guessedCorrectLetters = [];
-let guessedWrongLetters = [];
+let countdown = 10;
+let correctLetters = [];
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-const SECRET_WORD = WORDS[getRandomInt(WORDS.length)];
+const SECRET_WORD = SECRET_WORDS[getRandomInt(SECRET_WORDS.length)];
+console.log(SECRET_WORD);
+const SECRET_WORD_LETTERS = SECRET_WORD.split("");
+const SECRET_WORD_UNIQUE_LETTERS = [...new Set(SECRET_WORD_LETTERS)].sort();
 
 const SECRET_WORD_WRAPPER = document.getElementById("secret-word");
+const LETTER_BUTTONS = document.querySelectorAll(".letter");
 
-console.log(SECRET_WORD_WRAPPER.innerHTML);
-
-const SECRET_WORD_LETTERS = SECRET_WORD.split("");
+let ELEMENT_COUNTDOWN = document.getElementById("countdown");
 
 SECRET_WORD_LETTERS.forEach((letter) => {
   SECRET_WORD_WRAPPER.innerHTML += `<div class="secret-letter-wrapper">\n<span class="secret-letter secret-letter-hidden">${letter.toUpperCase()}</span>\n</div>`;
 });
 
-const LETTER_BUTTONS = document.querySelectorAll(".letter");
-
-let ELEMENT_COUNTDOWN = document.getElementById("countdown");
+listenToKeyboard();
 
 LETTER_BUTTONS.forEach((button) => {
   button.addEventListener("click", (event) => {
     const CLICKED_LETTER = event.target.innerHTML.toLowerCase();
-    console.log(event.target.innerHTML.toLowerCase());
-    console.log(
-      `Is in secret word? ${isLetterInSecretWord(SECRET_WORD, CLICKED_LETTER)}`
-    );
 
     button.disabled = true;
 
-    if (isLetterInSecretWord(SECRET_WORD, CLICKED_LETTER)) {
+    if (isLetterInSecretWord(CLICKED_LETTER)) {
+      console.log(CLICKED_LETTER);
       button.classList.add("correct-letter");
 
-      console.log(`Clicked letter: ${CLICKED_LETTER}`);
+      correctLetters.push(CLICKED_LETTER);
+      displayGuessedCorrectLetter(CLICKED_LETTER);
 
-      functionName(CLICKED_LETTER);
+      if (isWinner(SECRET_WORD_UNIQUE_LETTERS, correctLetters)) {
+        console.log("we have a winner!!");
+
+        setTimeout(() => {
+          JS_CONFETTI.addConfetti();
+          displayWinnerMessage();
+        }, 500);
+      }
     } else {
       button.classList.add("wrong-letter");
       if (countdown > 0) {
@@ -73,13 +77,24 @@ LETTER_BUTTONS.forEach((button) => {
   });
 });
 
-function isLetterInSecretWord(secretWord, letter) {
-  const SECRET_WORD_LETTERS = secretWord.split("");
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
+function isLetterInSecretWord(letter) {
   return SECRET_WORD_LETTERS.includes(letter);
 }
 
-function functionName(inputLetter) {
+function isWinner(secretWordLetters, correctLetters) {
+  console.log(secretWordLetters, correctLetters.sort());
+  if (secretWordLetters.join() === correctLetters.sort().join()) {
+    LETTER_BUTTONS.forEach((button) => (button.disabled = true));
+    return true;
+  }
+  return false;
+}
+
+function displayGuessedCorrectLetter(inputLetter) {
   const LETTER_ELEMENTS = document.querySelectorAll(".secret-letter");
 
   LETTER_ELEMENTS.forEach((letter) => {
@@ -88,3 +103,17 @@ function functionName(inputLetter) {
     }
   });
 }
+
+const displayWinnerMessage = () => {
+  const WINNER_MESSAGE = document.querySelector(".winner-message");
+  const ALPHABET = document.querySelector(".alphabet");
+
+  ALPHABET.classList.add("display-none");
+  WINNER_MESSAGE.classList.remove("display-none");
+};
+
+const RETRY_BUTTON = document.getElementById("retry-button");
+
+RETRY_BUTTON.addEventListener("click", () => {
+  location.reload();
+});
