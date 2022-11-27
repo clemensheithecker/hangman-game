@@ -37,8 +37,5 @@
   "bugs": {
     "url": "https://github.com/clemensheithecker/hangman-game/issues"
   },
-  "homepage": "https://github.com/clemensheithecker/hangman-game#readme",
-  "dependencies": {
-    "modern-normalize": "^1.1.0"
-  }
+  "homepage": "https://github.com/clemensheithecker/hangman-game#readme"
 }
