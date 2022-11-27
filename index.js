@@ -107,9 +107,12 @@ function displayGuessedCorrectLetter(inputLetter) {
 const displayWinnerMessage = () => {
   const WINNER_MESSAGE = document.querySelector(".winner-message");
   const ALPHABET = document.querySelector(".alphabet");
+  const COUNTDOWN = document.querySelector(".countdown");
 
   ALPHABET.classList.add("display-none");
   WINNER_MESSAGE.classList.remove("display-none");
+
+  COUNTDOWN.classList.add("countdown-winner");
 };
 
 const RETRY_BUTTON = document.getElementById("retry-button");

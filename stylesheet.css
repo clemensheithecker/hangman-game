@@ -59,11 +59,27 @@ footer a {
   border-radius: 9999px;
 }
 
+.countdown-winner {
+  background-color: #16a34a;
+}
+
+.countdown-looser {
+  background-color: #dc2626;
+}
+
 .countdown p {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
   color: #eff6ff;
+}
+
+.countdown-winner p {
+  color: #f0fdf4;
+}
+
+.countdown-looser p {
+  color: #fef2f2;
 }
 
 .secret-word {
