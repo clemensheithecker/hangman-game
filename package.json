@@ -1,7 +1,7 @@
 {
   "name": "hangman-game",
   "version": "1.0.0",
-  "description": "",
+  "description": "A word guessing game.",
   "main": "./index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,30 @@
     "type": "git",
     "url": "git+https://github.com/clemensheithecker/hangman-game.git"
   },
-  "author": "",
-  "license": "ISC",
+  "contributors": [
+    {
+      "name": "Clemens Stefan Heithecker",
+      "email": "clemens@heithecker.dev",
+      "url": "https://github.com/clemensheithecker/"
+    },
+    {
+      "name": "Dayana",
+      "url": "https://github.com/ddpeneva"
+    },
+    {
+      "name": "Geetanjali",
+      "url": "https://github.com/GeetanjaliNR"
+    },
+    {
+      "name": "Neus Garcia Puigdollers",
+      "url": "https://github.com/neusgp"
+    },
+    {
+      "name": "Sarah",
+      "url": "https://github.com/sarahcode2112"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/clemensheithecker/hangman-game/issues"
   },
