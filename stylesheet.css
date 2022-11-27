@@ -305,8 +305,24 @@ footer a {
     background-color: #1d4ed8;
   }
 
+  .countdown-winner {
+    background-color: #15803d;
+  }
+
+  .countdown-looser {
+    background-color: #b91c1c;
+  }
+
   .countdown p {
     color: #dbeafe;
+  }
+
+  .countdown-winner p {
+    color: #dcfce7;
+  }
+
+  .countdown-looser p {
+    color: #fee2e2;
   }
 
   .secret-letter-wrapper {
