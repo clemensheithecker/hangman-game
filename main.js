@@ -2,29 +2,15 @@ import { listenToKeyboard } from "./keyBindings.js";
 
 const JS_CONFETTI = new JSConfetti();
 
-const SECRET_WORDS = [
-  "fashion",
-  "employee",
-  "original",
-  "shark",
-  "egg",
-  "star",
-  "freight",
-  "airplane",
-  "eye",
-  "lavalamp",
-  "bridge",
-  "highway",
-  "pants",
-  "dishwasher",
-];
-const SECRET_WORD = SECRET_WORDS[getRandomInt(SECRET_WORDS.length)];
+const SECRET_WORD = await getSecretWord();
+console.log(SECRET_WORD);
 const SECRET_WORD_LETTERS = SECRET_WORD.split("");
+console.log(SECRET_WORD_LETTERS);
 const SECRET_WORD_LETTERS_UNIQUE = [...new Set(SECRET_WORD_LETTERS)].sort();
 
 const ELEMENT_COUNTDOWN_TEXT = document.getElementById("countdown-text");
 const ELEMENT_LETTER = document.querySelectorAll(".letter");
-const ELEMENT_RETRY_BUTTON = document.getElementById("retry-button");
+const ELEMENT_RETRY_BUTTONS = document.querySelectorAll(".retry-button");
 const ELEMENT_SECRET_WORD = document.getElementById("secret-word");
 
 let countdown = 10;
@@ -71,8 +57,10 @@ ELEMENT_LETTER.forEach((button) => {
   });
 });
 
-ELEMENT_RETRY_BUTTON.addEventListener("click", () => {
-  location.reload();
+ELEMENT_RETRY_BUTTONS.forEach((retryButton) => {
+  retryButton.addEventListener("click", () => {
+    location.reload();
+  });
 });
 
 function displayGuessedCorrectLetter(guessedLetter) {
@@ -127,3 +115,11 @@ function isWinner(secretWordLetters, guessedCorrectLetters) {
     return false;
   }
 }
+
+async function getSecretWord() {
+  let response = await fetch("https://random-words-api.vercel.app/word/noun");
+  let data = await response.json();
+  return data[0].word;
+}
+
+// console.log(await getSecretWord());
