@@ -84,6 +84,8 @@ footer a {
 
 .secret-word {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: auto;
   margin-bottom: 1rem;
 }
