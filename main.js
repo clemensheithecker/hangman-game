@@ -3,9 +3,7 @@ import { listenToKeyboard } from "./keyBindings.js";
 const JS_CONFETTI = new JSConfetti();
 
 const SECRET_WORD = await getSecretWord();
-console.log(SECRET_WORD);
 const SECRET_WORD_LETTERS = SECRET_WORD.split("");
-console.log(SECRET_WORD_LETTERS);
 const SECRET_WORD_LETTERS_UNIQUE = [...new Set(SECRET_WORD_LETTERS)].sort();
 
 const ELEMENT_COUNTDOWN_TEXT = document.getElementById("countdown-text");
@@ -119,7 +117,5 @@ function isWinner(secretWordLetters, guessedCorrectLetters) {
 async function getSecretWord() {
   let response = await fetch("https://random-words-api.vercel.app/word/noun");
   let data = await response.json();
-  return data[0].word;
+  return data[0].word.toLowerCase();
 }
-
-// console.log(await getSecretWord());
