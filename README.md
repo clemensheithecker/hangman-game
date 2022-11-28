@@ -4,6 +4,8 @@
 game. We built this app in collaboration as part of the Web Development
 traineeship program at [Ledgy](https://ledgy.com/de/).
 
+Check out a [live demo](hangman-game-ledgy.vercel.app/) of the game.
+
 ## Features
 
 The app displays a counter, the underlined hidden word and the letters of the
