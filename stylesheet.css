@@ -63,7 +63,7 @@ footer a {
   background-color: #16a34a;
 }
 
-.countdown-looser {
+.countdown-loser {
   background-color: #dc2626;
 }
 
@@ -78,7 +78,7 @@ footer a {
   color: #f0fdf4;
 }
 
-.countdown-looser p {
+.countdown-loser p {
   color: #fef2f2;
 }
 
@@ -177,13 +177,13 @@ footer a {
   color: #991b1b;
 }
 
-.winner-message {
+.result-message {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.winner-message h2 {
+.result-message h2 {
   margin: 2rem 0 3rem 0;
   color: #111827;
   text-align: center;
@@ -191,7 +191,7 @@ footer a {
   font-size: 1.5rem;
 }
 
-.winner-message button {
+.result-message button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 9999px;
@@ -204,7 +204,7 @@ footer a {
   cursor: pointer;
 }
 
-.winner-message button:hover {
+.result-message button:hover {
   background-color: #dbeafe;
   border-color: #93c5fd;
 }
@@ -257,12 +257,12 @@ footer a {
     margin: 0.5rem;
   }
 
-  .winner-message h2 {
+  .result-message h2 {
     margin: 2rem 0 4rem 0;
     font-size: 1.875rem;
   }
 
-  .winner-message button {
+  .result-message button {
     padding: 0.75rem 2rem;
     font-size: 1.25rem;
   }
@@ -309,7 +309,7 @@ footer a {
     background-color: #15803d;
   }
 
-  .countdown-looser {
+  .countdown-loser {
     background-color: #b91c1c;
   }
 
@@ -321,7 +321,7 @@ footer a {
     color: #dcfce7;
   }
 
-  .countdown-looser p {
+  .countdown-loser p {
     color: #fee2e2;
   }
 
@@ -380,17 +380,17 @@ footer a {
     color: #fef2f2;
   }
 
-  .winner-message h2 {
+  .result-message h2 {
     color: #f9fafb;
   }
 
-  .winner-message button {
+  .result-message button {
     background-color: #0c4a6e;
     border-color: #1e40af;
     color: #f9fafb;
   }
 
-  .winner-message button:hover {
+  .result-message button:hover {
     color: #f9fafb;
     background-color: #1e40af;
     border-color: #1d4ed8;

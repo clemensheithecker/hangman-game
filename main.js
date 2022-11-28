@@ -60,6 +60,8 @@ ELEMENT_LETTER.forEach((button) => {
           ELEMENT_LETTER.forEach((b) => {
             b.disabled = true;
           });
+
+          displayLoserMessage();
         }
       } else {
         countdown = 0;
@@ -83,10 +85,25 @@ function displayGuessedCorrectLetter(guessedLetter) {
   });
 }
 
+function displayLoserMessage() {
+  const ELEMENT_ALPHABET = document.querySelector(".alphabet");
+  const ELEMENT_COUNTDOWN = document.querySelector(".countdown");
+  const ELEMENT_SECRET_LETTER = document.querySelectorAll(".secret-letter");
+  const ELEMENT_WINNER_MESSAGE = document.querySelector("#loser-message");
+
+  ELEMENT_ALPHABET.classList.add("display-none");
+  ELEMENT_COUNTDOWN.classList.add("countdown-loser");
+  ELEMENT_WINNER_MESSAGE.classList.remove("display-none");
+
+  ELEMENT_SECRET_LETTER.forEach((letter) => {
+    letter.classList.remove("secret-letter-hidden");
+  });
+}
+
 function displayWinnerMessage() {
   const ELEMENT_ALPHABET = document.querySelector(".alphabet");
   const ELEMENT_COUNTDOWN = document.querySelector(".countdown");
-  const ELEMENT_WINNER_MESSAGE = document.querySelector(".winner-message");
+  const ELEMENT_WINNER_MESSAGE = document.querySelector("#winner-message");
 
   ELEMENT_ALPHABET.classList.add("display-none");
   ELEMENT_COUNTDOWN.classList.add("countdown-winner");
